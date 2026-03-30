@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Chaveiro Automotivo 24 Horas - Chaveiro Itajaí";
+const description = "Abertura de carros sem danificar, confecção de chave codificada e presença em Itajaí e região. Socorro rápido!";
+---
+
+<Layout title={title} description={description}>
+	<Header />
+	<main class="service-page">
+		<div class="page-header">
+			<div class="container">
+				<h1>Chaveiro Automotivo</h1>
+				<p>Socorro para seu veículo: Chaves esquecidas dentros, chaves codificadas e reparos.</p>
+			</div>
+		</div>
+		
+		<div class="container content">
+			<h2>Especialistas em Chaves de Carros</h2>
+			<p>Perdeu a chave do carro ou trancou dentro? Não force a porta! Nossa equipe usa técnicas não destrutivas para abrir qualquer veículo nacional ou importado. Também fazemos cópia de chaves codificadas (Transponder) e chaves canivete no local.</p>
+			
+			<div class="cta-box text-center mt-10">
+				<h3>Trancou o carro? Estamos a caminho!</h3>
+				<a href="https://wa.me/5547999999999" class="btn btn-primary btn-large">Enviar Minha Localização WhatsApp</a>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-header { background: #1a1a1a; color: white; padding: 100px 0 60px; text-align: center; }
+	.page-header h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); }
+	.page-header p { font-size: 1.2rem; color: #ccc; }
+	.content { padding: 60px 20px; max-width: 800px; margin: 0 auto; line-height: 1.8; }
+	.content h2 { margin-bottom: 20px; font-size: 1.8rem; }
+	.content p { font-size: 1.1rem; color: #444; margin-bottom: 20px; }
+	.cta-box { background: #f9f9f9; padding: 40px; border-radius: 8px; border-top: 4px solid var(--primary); margin-top: 50px; }
+	.cta-box h3 { margin-bottom: 25px; }
+	.text-center { text-align: center; }
+</style>
