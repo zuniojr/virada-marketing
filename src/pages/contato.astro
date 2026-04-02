@@ -46,7 +46,7 @@ const contactItems = [
 			<div class="container contact-grid">
 				<div class="contact-methods animate-fade">
 					{contactItems.map(item => (
-						<a href={item.link} class="glass-card contact-item" target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'nofollow' : undefined}>
+						<a href={item.link} class="glass-card contact-item" target="_blank" rel="nofollow">
 							<div class="item-icon">{item.icon}</div>
 							<div class="item-text">
 								<h3>{item.title}</h3>
