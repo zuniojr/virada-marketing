@@ -4,44 +4,63 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
+const title = "Blog | Estratégias de Vendas e Marketing Digital";
+const description = "Leia as nossas dicas sobre tráfego pago, SEO, conversão em Landing Pages e muito mais no blog oficial da Virada Marketing Digital.";
+
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
-const title = "Blog Chaveiro Itajaí - Dicas de Segurança";
-const description = "Acompanhe nosso blog e fique por dentro das melhores dicas de segurança residencial e automotiva em Itajaí e região.";
 ---
 
 <Layout title={title} description={description}>
 	<Header />
-	<main class="page-content">
-		<div class="page-header">
-			<div class="container">
-				<h1>Blog de Segurança</h1>
-				<p>Dicas, novidades e informações essenciais para a sua proteção.</p>
+	<main>
+		<section class="page-hero">
+			<div class="container animate-fade">
+				<span class="section-badge">Insights & Estratégias</span>
+				<h1>Marketing <span class="text-gradient">Inteligente</span></h1>
+				<p>Informação de qualidade para você manter o seu negócio escalando no digital.</p>
 			</div>
-		</div>
+		</section>
 
-		<section class="blog-section">
+		<section class="blog-grid-section">
 			<div class="container">
 				<div class="blog-grid">
-					{
-						posts.map((post) => (
-							<article class="blog-card">
-								<a href={`/blog/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt={post.data.title} />
-									<div class="blog-card-content">
-										<p class="date">
-											{post.data.pubDate.toLocaleDateString('pt-BR')}
-										</p>
-										<h2 class="title">{post.data.title}</h2>
-										<p class="description">{post.data.description}</p>
-										<span class="read-more">Ler artigo completo →</span>
-									</div>
-								</a>
-							</article>
-						))
-					}
+					{posts.map((post, index) => (
+						<article class="post-card glass-card animate-fade" style={`animation-delay: ${0.1 * index}s`}>
+							<div class="post-image-wrapper">
+								<img src={post.data.heroImage} alt={post.data.title} />
+								<span class="category-badge">Performance</span>
+							</div>
+							<div class="post-content">
+								<span class="post-date">{post.data.pubDate.toLocaleDateString('pt-BR')}</span>
+								<h3><a href={`/blog/${post.slug}/`}>{post.data.title}</a></h3>
+								<p>{post.data.description}</p>
+								<a href={`/blog/${post.slug}/`} class="read-more">Ler Artigo Completo →</a>
+							</div>
+						</article>
+					))}
+				</div>
+				
+				<div class="load-more animate-fade">
+					<button class="btn btn-outline">Carregar Mais Artigos</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="newsletter-section">
+			<div class="container">
+				<div class="newsletter-box glass-card animate-fade">
+					<div class="newsletter-inner">
+						<div class="newsletter-text">
+							<h2>Domine o Digital</h2>
+							<p>Receba as melhores dicas de tráfego, funis de vendas e atualizações de mercado da Virada Marketing Digital diretamente no seu e-mail.</p>
+						</div>
+						<form class="newsletter-form" onsubmit="return false;">
+							<input type="email" placeholder="Digite seu melhor e-mail" required />
+							<button type="submit" class="btn btn-primary">Inscrever-se</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -50,88 +69,167 @@ const description = "Acompanhe nosso blog e fique por dentro das melhores dicas 
 </Layout>
 
 <style>
-	.page-header { background: #1a1a1a; color: white; padding: 100px 0 60px; text-align: center; }
-	.page-header h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); }
-	.page-header p { font-size: 1.2rem; color: #ccc; }
-	
-	.blog-section {
-		padding: 80px 0;
-		background-color: var(--gray);
-		min-height: 50vh;
+	.page-hero {
+		padding: 200px 0 100px;
+		background: var(--dark-surface);
+		text-align: center;
+		border-bottom: 1px solid var(--glass-border);
 	}
-	
+
+	.page-hero h1 {
+		font-size: 4rem;
+		margin-bottom: 20px;
+	}
+
+	.page-hero p {
+		font-size: 1.2rem;
+		color: var(--text-muted);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.blog-grid-section {
+		padding: 120px 0;
+	}
+
 	.blog-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-		gap: 40px;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 30px;
 	}
-	
-	.blog-card {
-		background: #ffffff;
-		border-radius: 12px;
+
+	.post-card {
+		padding: 0;
 		overflow: hidden;
-		box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		transition: var(--transition);
 	}
-	
-	.blog-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+	.post-card:hover { transform: translateY(-10px); }
+
+	.post-image-wrapper {
+		position: relative;
+		height: 240px;
+		overflow: hidden;
 	}
-	
-	.blog-card a {
-		text-decoration: none;
-		color: inherit;
-		display: block;
-		height: 100%;
-	}
-	
-	.blog-card img {
+
+	.post-image-wrapper img {
 		width: 100%;
-		height: 220px;
+		height: 100%;
 		object-fit: cover;
-		border-bottom: 3px solid var(--primary);
+		transition: var(--transition);
 	}
-	
-	.blog-card-content {
-		padding: 25px;
+
+	.post-card:hover .post-image-wrapper img { transform: scale(1.1); }
+
+	.category-badge {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background: var(--primary);
+		color: var(--dark);
+		padding: 6px 15px;
+		border-radius: 100px;
+		font-weight: 700;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
-	
-	.date {
-		color: #888;
-		font-size: 0.9rem;
-		margin-bottom: 10px;
-		font-weight: 500;
+
+	.post-content {
+		padding: 30px;
 	}
-	
-	.title {
-		font-size: 1.4rem;
+
+	.post-date {
+		font-size: 0.85rem;
+		color: var(--text-muted);
 		margin-bottom: 15px;
-		color: #1a1a1a;
+		display: block;
+	}
+
+	.post-content h3 {
+		font-size: 1.4rem;
+		margin-bottom: 20px;
 		line-height: 1.4;
 	}
-	
-	.blog-card:hover .title {
-		color: var(--primary-dark);
+
+	.post-content h3 a {
+		color: white;
+		text-decoration: none;
+		transition: var(--transition);
 	}
-	
-	.description {
-		color: #555;
-		font-size: 1rem;
-		line-height: 1.6;
-		margin-bottom: 20px;
+
+	.post-content h3 a:hover { color: var(--primary); }
+
+	.post-content p {
+		color: var(--text-muted);
+		font-size: 0.95rem;
+		margin-bottom: 25px;
+		line-height: 1.7;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
-	
+
 	.read-more {
-		display: inline-block;
-		color: var(--primary-dark);
+		color: var(--primary);
+		text-decoration: none;
 		font-weight: 700;
-		font-size: 0.95rem;
-		text-transform: uppercase;
-		margin-top: auto;
+		font-size: 0.9rem;
+		transition: var(--transition);
+	}
+
+	.read-more:hover { gap: 15px; padding-left: 5px; }
+
+	.load-more {
+		text-align: center;
+		margin-top: 80px;
+	}
+
+	.newsletter-section {
+		padding-bottom: 150px;
+	}
+
+	.newsletter-box {
+		padding: 80px 60px;
+	}
+
+	.newsletter-inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.newsletter-text h2 { font-size: 2.2rem; margin-bottom: 15px; }
+	.newsletter-text p { color: var(--text-muted); font-size: 1.1rem; }
+
+	.newsletter-form {
+		display: flex;
+		gap: 15px;
+	}
+
+	.newsletter-form input {
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid var(--glass-border);
+		padding: 15px 25px;
+		border-radius: 12px;
+		color: white;
+		flex-grow: 1;
+		font-size: 1rem;
+	}
+
+	.newsletter-form input:focus {
+		outline: none;
+		border-color: var(--primary);
+	}
+
+	@media (max-width: 992px) {
+		.newsletter-inner { grid-template-columns: 1fr; text-align: center; }
+		.newsletter-form { flex-direction: column; }
+	}
+
+	@media (max-width: 768px) {
+		.page-hero h1 { font-size: 3rem; }
 	}
 </style>
