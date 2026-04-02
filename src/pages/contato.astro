@@ -43,7 +43,7 @@ const contactItems = [
 		</section>
 
 		<section class="contact-section">
-			<div class="container contact-grid">
+			<div class="container">
 				<div class="contact-methods animate-fade">
 					{contactItems.map(item => (
 						<a href={item.link} class="glass-card contact-item" target="_blank" rel="nofollow">
@@ -55,41 +55,6 @@ const contactItems = [
 							</div>
 						</a>
 					))}
-				</div>
-
-				<div class="contact-form-area glass-card animate-fade" style="animation-delay: 0.2s;">
-					<h2>Envie sua Mensagem</h2>
-					<form class="contact-form" onsubmit="return false;">
-						<div class="form-row">
-							<div class="form-group">
-								<label for="name">Nome Completo</label>
-								<input type="text" id="name" placeholder="Como podemos te chamar?" required />
-							</div>
-							<div class="form-group">
-								<label for="phone">Telefone / WhatsApp</label>
-								<input type="tel" id="phone" placeholder="(XX) XXXXX-XXXX" required />
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label for="service">Serviço de Interesse</label>
-							<select id="service">
-								<option value="landing-page">Criação de Landing Page</option>
-								<option value="trafego">Gestão de Tráfego Pago</option>
-								<option value="social-media">Gestão de Redes Sociais</option>
-								<option value="seo">SEO e Automação</option>
-								<option value="consultoria">Consultoria Técnica Completa</option>
-								<option value="outro">Outros Assuntos</option>
-							</select>
-						</div>
-
-						<div class="form-group">
-							<label for="message">Sua Mensagem</label>
-							<textarea id="message" rows="5" placeholder="Descreva brevemente sua necessidade..."></textarea>
-						</div>
-
-						<button type="submit" class="btn btn-primary w-full">Enviar Mensagem agora</button>
-					</form>
 				</div>
 			</div>
 		</section>

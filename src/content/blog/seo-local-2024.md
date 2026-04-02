@@ -2,7 +2,7 @@
 title: "A Importância do SEO para Negócios Locais em 2024"
 description: "Saiba por que o SEO local pode ser o diferencial para sua empresa ser a preferida dos clientes da sua região."
 pubDate: "2024-03-22"
-heroImage: "https://images.unsplash.com/photo-1572021335469-3171624c404c?q=80&w=1200&auto=format&fit=crop"
+heroImage: "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=1200&auto=format&fit=crop"
 ---
 
 ## Por que investir em SEO Local?
