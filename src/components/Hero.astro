@@ -23,22 +23,7 @@
 				<a href="#servicos" class="btn btn-outline" target="_blank">Nossas Soluções</a>
 			</div>
 
-			<div class="hero-stats">
-				<div class="stat-item">
-					<span class="stat-value">+500</span>
-					<span class="stat-label">Projetos Entregues</span>
-				</div>
-				<div class="stat-divider"></div>
-				<div class="stat-item">
-					<span class="stat-value">ROI</span>
-					<span class="stat-label">Maximizado</span>
-				</div>
-				<div class="stat-divider"></div>
-				<div class="stat-item">
-					<span class="stat-value">100%</span>
-					<span class="stat-label">Foco em Sucesso</span>
-				</div>
-			</div>
+
 		</div>
 
 		<div class="hero-visual animate-fade" style="animation-delay: 0.2s;">
@@ -152,31 +137,7 @@
 		margin-bottom: 60px;
 	}
 
-	/* Stats */
-	.hero-stats {
-		display: flex;
-		align-items: center;
-		gap: 30px;
-	}
 
-	.stat-value {
-		display: block;
-		font-size: 1.8rem;
-		font-weight: 800;
-		font-family: 'Outfit', sans-serif;
-		color: white;
-	}
-
-	.stat-label {
-		font-size: 0.9rem;
-		color: var(--text-muted);
-	}
-
-	.stat-divider {
-		width: 1px;
-		height: 40px;
-		background: var(--glass-border);
-	}
 
 	/* Visual Elements */
 	.hero-visual {
@@ -244,19 +205,15 @@
 		.overlay {
 			background: radial-gradient(circle, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.7) 100%);
 		}
-		.badge-premium, .hero-actions, .hero-stats {
+		.badge-premium, .hero-actions {
 			justify-content: center;
 		}
-		.hero p { margin: 0 auto 45px; }
 		.hero-visual { display: none; }
 	}
 
 	@media (max-width: 768px) {
 		.hero h1 { font-size: 2.8rem; }
 		.hero-actions { flex-direction: column; }
-		.hero-stats {
-			flex-wrap: wrap;
-			gap: 20px;
-		}
+
 	}
 </style>

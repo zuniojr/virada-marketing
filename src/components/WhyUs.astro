@@ -1,0 +1,139 @@
+---
+---
+<section id="why-us" class="why-us">
+	<div class="container">
+		<div class="section-header text-center animate-fade">
+			<span class="section-badge">Diferenciais</span>
+			<h2>Por que escolher a Virada?</h2>
+			<p>Oferecemos tudo o que o seu negócio precisa para crescer na internet.</p>
+		</div>
+
+		<div class="why-us-grid">
+			<div class="glass-card why-card animate-fade" style="animation-delay: 0.1s;">
+				<div class="icon-wrapper">
+					<span class="icon">👥</span>
+				</div>
+				<h3>Mais Clientes</h3>
+				<p>Um site profissional atrai mais clientes locais e converte visitantes em vendas reais.</p>
+			</div>
+
+			<div class="glass-card why-card animate-fade" style="animation-delay: 0.2s;">
+				<div class="icon-wrapper">
+					<span class="icon">🌐</span>
+				</div>
+				<h3>Presença Online</h3>
+				<p>Apareça no Google e nas redes sociais. Seja encontrado pelos seus clientes quando procuram.</p>
+			</div>
+
+			<div class="glass-card why-card animate-fade" style="animation-delay: 0.3s;">
+				<div class="icon-wrapper">
+					<span class="icon">⭐</span>
+				</div>
+				<h3>Credibilidade</h3>
+				<p>Transmita confiança com um design elegante e profissional que reflete a qualidade do seu negócio.</p>
+			</div>
+
+			<div class="glass-card why-card animate-fade" style="animation-delay: 0.4s;">
+				<div class="icon-wrapper">
+					<span class="icon">💰</span>
+				</div>
+				<h3>Custo Acessível</h3>
+				<p>Planos simples e transparentes. Sem surpresas. Sem contratos longos. Apenas resultados.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.why-us {
+		padding: 100px 0;
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-header {
+		margin-bottom: 60px;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	.section-badge {
+		color: var(--primary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-size: 0.85rem;
+		margin-bottom: 15px;
+		display: inline-block;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		margin-bottom: 20px;
+		line-height: 1.2;
+	}
+
+	.section-header p {
+		color: var(--text-muted);
+		font-size: 1.1rem;
+	}
+
+	.why-us-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 30px;
+	}
+
+	.why-card {
+		padding: 40px 30px;
+		text-align: center;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		background: rgba(20, 20, 20, 0.4);
+	}
+
+	.why-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+		border-color: var(--primary);
+	}
+
+	.icon-wrapper {
+		width: 70px;
+		height: 70px;
+		background: rgba(255, 215, 0, 0.1);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 20px;
+		border: 1px solid rgba(255, 215, 0, 0.2);
+		transition: all 0.3s ease;
+	}
+
+	.why-card:hover .icon-wrapper {
+		background: var(--primary);
+		transform: scale(1.1);
+	}
+	
+	.why-card:hover .icon {
+		filter: brightness(0) invert(1);
+	}
+
+	.icon {
+		font-size: 2rem;
+		transition: all 0.3s ease;
+	}
+
+	.why-card h3 {
+		font-size: 1.3rem;
+		margin-bottom: 15px;
+		color: #fff;
+	}
+
+	.why-card p {
+		font-size: 0.95rem;
+		margin-bottom: 0;
+	}
+</style>
