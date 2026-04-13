@@ -102,6 +102,7 @@ const posts = (await getCollection('blog')).sort(
 		padding: 0;
 		overflow: hidden;
 		transition: var(--transition);
+		position: relative;
 	}
 
 	.post-card:hover { transform: translateY(-10px); }
@@ -158,6 +159,14 @@ const posts = (await getCollection('blog')).sort(
 		transition: var(--transition);
 	}
 
+	/* Torna todo o card do post clicável */
+	.post-content h3 a::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+	}
+
 	.post-content h3 a:hover { color: var(--primary); }
 
 	.post-content p {
@@ -179,7 +188,7 @@ const posts = (await getCollection('blog')).sort(
 		transition: var(--transition);
 	}
 
-	.read-more:hover { gap: 15px; padding-left: 5px; }
+	.post-card:hover .read-more { gap: 15px; padding-left: 5px; }
 
 	.load-more {
 		text-align: center;
