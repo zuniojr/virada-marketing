@@ -2,7 +2,7 @@
 title: "O Que é LTV (Lifetime Value)? A Métrica do Futuro do Seu Negócio"
 description: "Entenda por que manter um cliente atual é muito mais barato do que conquistar um novo e como essa métrica decide o futuro da sua empresa."
 pubDate: "2024-06-26"
-heroImage: "https://images.unsplash.com/photo-1543286386-713bcd534007?q=80&w=1200&auto=format&fit=crop"
+heroImage: "/images/blog/ltv-lifetime-value.avif"
 ---
 
 ## Além da Primeira Venda
