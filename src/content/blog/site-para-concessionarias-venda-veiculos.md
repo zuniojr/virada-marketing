@@ -7,7 +7,7 @@ heroImage: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=120
 
 ## O Showroom que Nunca Fecha
 
-Comprar um carro hoje começa com buscas rigorosas no Google e redes sociais. Se a sua concessionária não possui uma vitrine virtual de veículos totalmente otimizada — oferecendo fotos de carros em alta resolução, fichas técnicas completas e navegação intuitiva para quem busca carros novos e seminovos —, o lead sequer fará uma visita à sua loja física. Seu catálogo online é o seu melhor vendedor 24 horas por dia.
+Comprar um carro é um processo de pesquisa intensa. Se o seu estoque não está online com boas fotos e informações técnicas, o cliente nem chegará à sua porta.
 
 ### Filtros Inteligentes
 Permita que o cliente filtre por marca, ano, quilometragem e preço, encontrando o carro ideal em segundos.
