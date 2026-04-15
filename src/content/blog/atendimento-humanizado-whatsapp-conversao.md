@@ -2,7 +2,7 @@
 title: "Atendimento Humanizado no WhatsApp: Convertendo Conversas em Vendas"
 description: "Não seja um robô. Aprenda as técnicas de atendimento que geram conexão e fazem o seu cliente se sentir especial e pronto para fechar negócio."
 pubDate: "2024-07-23"
-heroImage: "https://images.unsplash.com/photo-1542744094-1563fbe56372?q=80&w=1200&auto=format&fit=crop"
+heroImage: "/images/blog/atendimento-humanizado.avif"
 ---
 
 ## Do "Oi" ao Fechamento
