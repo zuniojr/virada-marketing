@@ -2,7 +2,7 @@
 title: "Podcast Corporativo: Criando um Canal de Escuta e Autoridade Profunda"
 description: "Entenda por que o formato de áudio é uma das melhores formas de construir autoridade e fidelizar seu público no longo prazo."
 pubDate: "2024-07-17"
-heroImage: "https://images.unsplash.com/photo-1590602847442-132904c6321b?q=80&w=1200&auto=format&fit=crop"
+heroImage: "/images/blog/podcast-corporativo.avif"
 ---
 
 ## O Poder da Voz
