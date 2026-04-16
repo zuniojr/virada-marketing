@@ -2,7 +2,7 @@
 title: "O Que é CPA (Custo por Aquisição)? A Métrica que Define seu Lucro"
 description: "Saiba como calcular o custo real de cada cliente que o seu marketing traz e como essa métrica decide se o seu negócio é sustentável ou não."
 pubDate: "2024-07-14"
-heroImage: "https://images.unsplash.com/photo-1543286386-713bcd534007?q=80&w=1200&auto=format&fit=crop"
+heroImage: "/images/blog/cpa-custo-por-aquisicao-marketing-digital.avif"
 ---
 
 ## A Matemática do Sucesso
