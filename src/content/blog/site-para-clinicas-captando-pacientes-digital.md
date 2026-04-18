@@ -1,7 +1,7 @@
 ---
 title: "Site para Clínicas e Consultórios: Captando Pacientes com Presença Digital"
 description: "Médicos, dentistas e psicólogos que investem em presença digital captam muito mais pacientes. Veja as melhores práticas para clínicas de saúde."
-pubDate: "2024-09-07"
+pubDate: "2026-03-02"
 heroImage: "https://images.unsplash.com/photo-1576091160550-217359f4b14d?q=80&w=1200&auto=format&fit=crop"
 ---
 
